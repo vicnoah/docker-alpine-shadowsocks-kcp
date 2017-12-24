@@ -1,6 +1,6 @@
 version: '2'
 services:
-        sslocal:
+        ss_kcp_arm_client:
                 image: wuwengang/docker-alpine-shadowsocks-kcp:arm_client_latest
                 restart: always
                 environment:
