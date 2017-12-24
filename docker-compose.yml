@@ -11,7 +11,6 @@ services:
                         SS_SERVER_PASSWD: 12345678
                         ENCRYPT_METHON: ase-256-cfb
                         SS_LOCAL_PORT: 1080
-                        ARCH: arm7
                 ports:
                         - 8118:8118
                         - 1080:1080
