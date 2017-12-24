@@ -1,0 +1,17 @@
+version: '2'
+services:
+        sslocal:
+                image: wuwengang/docker-alpine-shadowsocks-kcp:arm_client_latest
+                restart: always
+                environment:
+                        KCP_SERVER_IP: 192.168.5.55
+                        KCP_SERVER_PORT: 9443
+                        KCP_LOCAL_LISTEN_PORT: 8338
+                        KCP_LOCAL_MODE: fast2
+                        SS_SERVER_PASSWD: 12345678
+                        ENCRYPT_METHON: ase-256-cfb
+                        SS_LOCAL_PORT: 1080
+                        ARCH: arm7
+                ports:
+                        - 8118:8118
+                        - 1080:1080

@@ -1,0 +1,17 @@
+version: '2'
+services:
+        sslocal:
+                image: wuwengang/docker-alpine-shadowsocks-kcp:arm_client_latest
+                restart: always
+                environment:
+                        KCP_SERVER_IP: <服务器ip地址>
+                        KCP_SERVER_PORT: <服务器端口>
+                        KCP_LOCAL_LISTEN_PORT: <本地KCP端口>
+                        KCP_LOCAL_MODE: <KCP工作模式>
+                        SS_SERVER_PASSWD: <服务器shadowsocks密码>
+                        ENCRYPT_METHON: <服务器shadowsocks加密方式>
+                        SS_LOCAL_PORT: 1080
+                        ARCH: <cpu架构可选:arm5,arm6,arm7>
+                ports:
+                        - 8118:8118
+                        - 1080:1080
