@@ -1,5 +1,5 @@
 #!/bin/sh
 
 /sslocal.sh
-nohup /usr/sbin/privoxy /etc/privoxy/config >/dev/null 2>&1 &
+/usr/sbin/privoxy /etc/privoxy/config
 /kcptun.sh
