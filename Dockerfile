@@ -26,6 +26,7 @@ RUN unzip /kcptun.zip
 RUN rm -rf /kcptun.zip
 ADD ./sslocal/sslocal.sh /sslocal.sh
 ADD ./privoxy/config /etc/privoxy/config
+ADD ./privoxy/whitelistskip.action /etc/privoxy/whitelistskip.action
 ADD ./kcptun.sh /kcptun.sh
 ADD entrypoint.sh /entrypoint.sh
 
