@@ -1,0 +1,17 @@
+version: '2'
+services:
+        ss_kcp_client:
+                image: wuwengang/docker-alpine-shadowsocks-kcp:client_latest
+                restart: always
+                environment:
+                        KCP_SERVER_IP: <KCP服务器ip地址>
+                        KCP_SERVER_PORT: <KCP服务器端口>
+                        KCP_LOCAL_LISTEN_PORT: <本地KCP端口-也就是kcp通道代理过后本地的shadowsocks端口>
+                        KCP_LOCAL_MODE: <KCP工作模式-建议使用fast2>
+                        SS_SERVER_PASSWD: <服务器shadowsocks密码>
+                        SS_SERVER_ENCRYPT_METHON: <服务器shadowsocks加密方式>
+                        SS_LOCAL_PORT: 1080
+                ports:
+                        - 8118:8118 --http代理端口
+                        - 1080:1080 --socks5端口
+                        - 8338:8338 --访问shadowsocks服务的端口
