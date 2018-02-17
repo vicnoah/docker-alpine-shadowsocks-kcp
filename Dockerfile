@@ -42,4 +42,4 @@ RUN chmod +x /ssserver.sh
 RUN chmod +x /kcptun.sh
 RUN chmod +x /entrypoint.sh
 
-CMD ["/bin/sh -c '/entrypoint.sh && tail -f /dev/null'"]
+CMD ["/entrypoint.sh"]
