@@ -42,4 +42,4 @@ RUN chmod +x /ssserver.sh
 RUN chmod +x /kcptun.sh
 RUN chmod +x /entrypoint.sh
 
-CMD ["/entrypoint.sh"]
+CMD ["nohup /entrypoint.sh >/dev/null 2>&1 &"]
